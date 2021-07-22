@@ -7,92 +7,111 @@
 
 body {
   background: linear-gradient(100deg, #111, #000);
-  text-rendering: optimizeLegibility !important;
-  -webkit-font-smoothing: antialiased !important;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
   font-family: Arial, Helvetica, sans-serif;
   max-width: 100vw;
 }
 
-.navigation {
-  position: fixed;
-  display: flex;
-  width: 100%;
-  background: linear-gradient(100deg, #000, #111);
-  max-height: 125px;
-  height: 70px;
-  top: 0;
-  box-shadow: 0 2px 3px rgba(0, 0, 0, 0.50);
-  z-index: 1;
+ul {
+  list-style: none;
 }
 
-ul {
+a {
+  text-decoration: none;
+}
+
+.header-container {
+  position: fixed;
+  top: 0;
+  z-index: 1;
+  max-height: 70px;
+  height: 100%;
+  width: 100%;
+  background: linear-gradient(100deg, #000, #111);
+  box-shadow: 0 2px 3px rgb(0 0 0 / 50%);
   display: flex;
-  list-style: none;
+  align-items: center;
+  padding-left: 5.5%;
+}
+
+.header-content {
+  display: flex;
+  align-items: center;
+  max-width: 70.5vw;
+  width: 100%;
+  margin-right: auto;
+}
+
+.logo {
+  width: 150px;
+  height: 100px;
+}
+
+.navigation-items {
+  display: flex;
+  align-items: center;
+}
+
+.avatar {
+  width: 30px;
+  height: 30px;
+  border-radius: 5px;
+  margin-left: auto;
+}
+
+.navigation-items li {
+  display: flex;
+  align-items: center;
+  transition: opacity 0.5s;
+  margin-left: 70px;
   cursor: pointer;
 }
 
-.navigation .navigation-items li:hover {
+.navigation-items li a {
+  color: #fff;
+  font-size: 15px;
+}
+
+.navigation-items li:hover {
   opacity: 0.6;
 }
 
-.navigation .navigation-items img {
-  display: flex;
-  width: 150px;
-  height: 100px;
-  margin-left: 135px;
-  margin-top: -15px;
-}
-
-.navigation .navigation-items li  {
-  color: #fff;
-  display: flex;
-  align-items: center;
-  font-size: 15px;
-  margin-left: 70px;
-  width: 20px;
-  transition: opacity 0.5s;
-  padding: -20px -300px 0 0;
-}
-
-.navigation-icons li {
-  position: absolute;
-  display: flex;
-  justify-content: center;
-  left: 1909px;
-  top: 20px;
-  max-width: 70%;
-}
-
-nav ul li img {
-  display: flex;
-  width: 30px;
-  border-radius: 5px;
+.spidermovie {
+  position: relative;
 }
 
 .background-spider {
+  position: relative;
   width: 100%;
-  height: 800px;
+  max-height: 800px;
+  height: 100%;
   margin-top: 70px;
-  left: 200px;
-  max-width: 120%;
+  z-index: -1;
 }
 
-.spidermovie .logo {
-  display: flex;
-  margin-left: 150px;
-  margin-top: -550px;
-  width: 400px;
+.spidermovie-content {
+  position: absolute;
+  bottom: 200px;
+  left: 6%;
+}
 
+.spidermovie-content .logo {
+  width: 400px;
+  height: 150px;
+  object-fit: cover;
 }
 
 .spidermovie p {
-  display: flex;
   color: #fff;
-  margin-left: 150px;
   font-size: 20px;
-  padding: 30px 0 15px;
-  width: 30%;
-  max-width: 100%;
+  margin-top: 25px;
+}
+
+.spidermovie-content .spidermovie-buttons {
+  display: flex;
+  align-items: center;
+  margin-top: 40px;
 }
 
 .spidermovie .watch {
@@ -101,18 +120,17 @@ nav ul li img {
   width: 60px;
   height: 60px;
   cursor: pointer;
-  margin-left: 150px;
-  margin-top: 25px;
   border-radius: 100%;
   font-weight: bold;
-  font-size: 20px
+  font-size: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: filter 0.6s;
 }
 
 .spidermovie .watch img {
-  display: flex;
   width: 25px;
-  margin-left: 17px;
-  margin-top: -1px;
 }
 
 .spidermovie .more {
@@ -123,331 +141,83 @@ nav ul li img {
   height: 60px;
   cursor: pointer;
   margin-left: 25px;
-  margin-top: 25px;
   border-radius: 5px;
-  font-size: 20px
+  font-size: 20px;
+  position: relative;
+  transition: color 0.2s;
+  font-weight: 500;
 }
 
-button:hover {
-  filter: brightness( 80% );
-  transition: 0.6s;
+.spidermovie .more::before {
+  content: '';
+  position: absolute;
+  z-index: -1;
+  background: #fff;
+  width: 0;
+  height: 100%;
+  left: 0;
+  top: 0;
+  transition: width 0.4s;
 }
 
-.popular-series h1 {
+.spidermovie .more:hover {
+  color: #333;
+}
+
+.spidermovie .more:hover::before {
+  width: 100%;
+}
+
+.spidermovie-content .watch:hover {
+  filter: brightness(80%);
+}
+
+.recommended-movies {
+  margin-top: -100px;
+  margin-left: 6%;
+}
+
+.popular-movies {
   display: flex;
-  color: white;
-  margin-left: 150px;
-  margin-top: 95px;
+  flex-direction: column;
 }
 
-.popular-series .sexeducation {
-  display: flex;
-  width: 350px;
-  height: 200px;
-  border-radius: 10px;
-  margin-left: 150px;
-  margin-top: 20px;
-}
-
-.popular-series .lucifer {
-  display: flex;
-  width: 350px;
-  height: 200px;
-  border-radius: 10px;
-  margin-left: 510px;
-  margin-top: -200px;
-}
-
-.popular-series .you {
-  display: flex;
-  width: 350px;
-  height: 200px;
-  border-radius: 10px;
-  margin-left: 870px;
-  margin-top: -200px;
-}
-
-.popular-series .lacasadepapel {
-  display: flex;
-  width: 350px;
-  height: 200px;
-  border-radius: 10px;
-  margin-left: 1230px;
-  margin-top: -200px;
-}
-
-.popular-series .blackmirror {
-  display: flex;
-  width: 350px;
-  height: 200px;
-  border-radius: 10px;
-  margin-left: 1590px;
-  margin-top: -200px;
+.popular-movies:not(.popular-movies:first-child) {
+  margin-top: 100px;
 }
 
 .popular-movies h1 {
-  display: flex;
-  color: white;
-  margin-left: 150px;
-  margin-top: 95px;
+  color: #fff;
 }
 
-.popular-movies .it {
+.popular-movies ul {
   display: flex;
-  width: 350px;
-  height: 200px;
-  border-radius: 10px;
-  margin-left: 150px;
+  align-items: center;
   margin-top: 20px;
 }
 
-.popular-movies .coletivo {
-  display: flex;
+.popular-movies li {
+  cursor: pointer;
+}
+
+.popular-movies li:not(.popular-movies li:first-child) {
+  margin-left: 10px;
+}
+
+.popular-movies ul li img {
   width: 350px;
-  height: 200px;
+  height: 100%;
   border-radius: 10px;
-  margin-left: 510px;
-  margin-top: -200px;
+  transition: filter 0.2s;
 }
 
-.popular-movies .halloween {
-  display: flex;
-  width: 350px;
-  height: 200px;
-  border-radius: 10px;
-  margin-left: 870px;
-  margin-top: -200px;
-}
-
-.popular-movies .jumanji {
-  display: flex;
-  width: 350px;
-  height: 200px;
-  border-radius: 10px;
-  margin-left: 1230px;
-  margin-top: -200px;
-}
-
-.popular-movies .grownups {
-  display: flex;
-  width: 350px;
-  height: 200px;
-  border-radius: 10px;
-  margin-left: 1590px;
-  margin-top: -200px;
-}
-
-.original h1 {
-  display: flex;
-  color: white;
-  margin-left: 150px;
-  margin-top: 95px;
-}
-
-.original .tenkushinpan {
-  display: flex;
-  width: 350px;
-  height: 700px;
-  border-radius: 10px;
-  margin-left: 150px;
-  margin-top: 20px;
-}
-
-.original .borderland {
-  display: flex;
-  width: 350px;
-  height: 700px;
-  border-radius: 10px;
-  margin-left: 510px;
-  margin-top: -700px;
-}
-
-.original .lupin {
-  display: flex;
-  width: 350px;
-  height: 700px;
-  border-radius: 10px;
-  margin-left: 870px;
-  margin-top: -700px;
-}
-
-.original .strangerthings {
-  display: flex;
-  width: 350px;
-  height: 700px;
-  border-radius: 10px;
-  margin-left: 1230px;
-  margin-top: -700px;
-}
-
-.original .bigmouth {
-  display: flex;
-  width: 350px;
-  height: 700px;
-  border-radius: 10px;
-  margin-left: 1590px;
-  margin-top: -700px;
-}
-
-.popular-animation h1 {
-  display: flex;
-  color: white;
-  margin-left: 150px;
-  margin-top: 95px;
-}
-
-.popular-animation .kungfupanda {
-  display: flex;
-  width: 350px;
-  height: 200px;
-  border-radius: 10px;
-  margin-left: 150px;
-  margin-top: 20px;
-}
-
-.popular-animation .desencanto {
-  display: flex;
-  width: 350px;
-  height: 200px;
-  border-radius: 10px;
-  margin-left: 510px;
-  margin-top: -200px;
-}
-
-.popular-animation .avatar {
-  display: flex;
-  width: 350px;
-  height: 200px;
-  border-radius: 10px;
-  margin-left: 870px;
-  margin-top: -200px;
-}
-
-.popular-animation .favoriteevil {
-  display: flex;
-  width: 350px;
-  height: 200px;
-  border-radius: 10px;
-  margin-left: 1230px;
-  margin-top: -200px;
-}
-
-.popular-animation .coraline {
-  display: flex;
-  width: 350px;
-  height: 200px;
-  border-radius: 10px;
-  margin-left: 1590px;
-  margin-top: -200px;
-}
-
-.popular-anime h1 {
-  display: flex;
-  color: white;
-  margin-left: 150px;
-  margin-top: 95px;
-}
-
-.popular-anime .yourname {
-  display: flex;
-  width: 350px;
-  height: 200px;
-  border-radius: 10px;
-  margin-left: 150px;
-  margin-top: 20px;
-}
-
-.popular-anime .animationcastle {
-  display: flex;
-  width: 350px;
-  height: 200px;
-  border-radius: 10px;
-  margin-left: 510px;
-  margin-top: -200px;
-}
-
-.popular-anime .toradora {
-  display: flex;
-  width: 350px;
-  height: 200px;
-  border-radius: 10px;
-  margin-left: 870px;
-  margin-top: -200px;
-}
-
-.popular-anime .pokemon {
-  display: flex;
-  width: 350px;
-  height: 200px;
-  border-radius: 10px;
-  margin-left: 1230px;
-  margin-top: -200px;
-}
-
-.popular-anime .deadlysins {
-  display: flex;
-  width: 350px;
-  height: 200px;
-  border-radius: 10px;
-  margin-left: 1590px;
-  margin-top: -200px;
-}
-
-.popular-comedia h1 {
-  display: flex;
-  color: white;
-  margin-left: 150px;
-  margin-top: 95px;
-}
-
-.popular-comedia .grownups2 {
-  display: flex;
-  width: 350px;
-  height: 200px;
-  border-radius: 10px;
-  margin-left: 150px;
-  margin-top: 20px;
-}
-
-.popular-comedia .firsttime {
-  display: flex;
-  width: 350px;
-  height: 200px;
-  border-radius: 10px;
-  margin-left: 510px;
-  margin-top: -200px;
-}
-
-.popular-comedia .shoppingsecurity {
-  display: flex;
-  width: 350px;
-  height: 200px;
-  border-radius: 10px;
-  margin-left: 870px;
-  margin-top: -200px;
-}
-
-.popular-comedia .whitegirls {
-  display: flex;
-  width: 350px;
-  height: 200px;
-  border-radius: 10px;
-  margin-left: 1230px;
-  margin-top: -200px;
-}
-
-.popular-comedia .pixels {
-  display: flex;
-  width: 350px;
-  height: 200px;
-  border-radius: 10px;
-  margin-left: 1590px;
-  margin-top: -200px;
+.popular-movies ul li img:hover {
+  filter: brightness(85%)
 }
 
 .footer {
   width: 100%;
-  height: 100px;
+  margin: 100px 0 50px;
 }
 
 .footer p {
@@ -455,7 +225,6 @@ button:hover {
   justify-content: center;
   color: grey;
   font-size: 20px;
-  margin-top: 150px;
 }
 
 .footer span {
@@ -464,9 +233,4 @@ button:hover {
   color: grey;
   font-size: 20px;
   margin-top: 20px;
-}
-
-.main img:hover {
-  filter: brightness( 80% );
-  transition: 0.3s;
 }

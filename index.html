@@ -1,101 +1,211 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Netflix</title>
-  <link rel="stylesheet" href="./style.css">
-  <link rel="shortcut icon" href="./images/faviconnetflix.svg" type="image/x-icon">
-</head>
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Netflix</title>
+    <link rel="stylesheet" href="./style.css">
+    <link rel="shortcut icon" href="./images/faviconnetflix.svg" type="image/x-icon">
+  </head>
+  <body>
+    <header class="header-container">
+      <div class="header-content">
+        <img 
+          class="logo" 
+          src="./images/logonetflix.svg" 
+          alt="Logo Netflix"
+        >
+  
+        <nav>
+          <ul class="navigation-items">
+            <li>
+              <a href="#">Início</a>
+            </li>
+            <li>
+              <a href="#">Séries</a>
+            </li>
+            <li>
+              <a href="#">Filmes</a>
+            </li>
+            <li>
+              <a href="#">Bombando</a>
+            </li>
+          </ul>
+        </nav>
+  
+        <img 
+          class="avatar" 
+          src="./images/avatarnetflix.jpg" 
+          alt="avatar"
+        >
+      </div>
+    </header>
 
-<body>
-  <header>
-    <nav class="navigation">
-      <ul class="navigation-items">
-        <img src="./images/logonetflix.svg" alt="Logo Netflix">
-        <li>Início</li>
-        <li>Séries</li>
-        <li>Filmes</li>
-        <li>Bombando</li>
-      </ul>
+    <main class="main">
+      <div class="spidermovie">
+        <img 
+          class="background-spider" 
+          src="./images/spidermanbackground.jpg" 
+          alt="background Spiderman"
+        >
 
-      <ul class="navigation-icons">
-        <li><img src="./images/avatarnetflix.jpg" alt="avatar"></li>
-      </ul>
-    </nav>
+        <div class="spidermovie-content">
+          <img 
+            class="logo" 
+            src="./images/spidermanlogo.png" 
+            alt="Logo Spiderman"
+          >
+  
+          <p>Ele ainda não é um Vingador, mas está prestes a salvar a cidade das garras de um <br /> engenhoso vilão.</p>
 
-    <div class="spidermovie">
-      <img class="background-spider" src="./images/spidermanbackground.jpg" alt="background Spiderman">
-      <img class="logo" src="./images/spidermanlogo.png" alt="Logo Spiderman">
-      <p>Ele ainda não é um Vingador, mas está prestes a salvar a cidade das garras de um engenhoso vilão.</p>
-      <button class="watch" type="button"><img src="./images/play.svg" alt="play"></button>
-      <button class="more" type="button">Mais informações</button>
-    </div>
-  </header>
+          <div class="spidermovie-buttons">
+            <button class="watch" type="button">
+              <img src="./images/play.svg" alt="play">
+            </button>
+            <button class="more" type="button">
+              Mais informações
+            </button>
+          </div>
+        </div>
+      </div>
 
-  <main class="main">
-  <div class="popular-series">
-    <h1>Populares na Netflix</h1>
-    <img class="sexeducation" src="./images/sexeducation.jpg" alt="sex education">
-    <img class="lucifer" src="./images/lucifer.jpeg" alt="Lucifer">
-    <img class="you" src="./images/you.jpg" alt="you">
-    <img class="lacasadepapel" src="./images/lacasadepapel.jpg" alt="la casa de papel">
-    <img class="blackmirror" src="./images/blackmirror.png" alt="black mirror">
-  </div>
+      <div class="recommended-movies">
+        <div class="popular-movies">
+          <h1>Populares na Netflix</h1>
+  
+          <ul>
+            <li>
+              <img src="./images/sexeducation.jpg" alt="sex education">
+            </li>
+            <li>
+              <img src="./images/lucifer.jpeg" alt="Lucifer">
+            </li>
+            <li>
+              <img src="./images/you.jpg" alt="you">
+            </li>
+            <li>
+              <img src="./images/lacasadepapel.jpg" alt="la casa de papel">
+            </li>
+            <li>
+              <img src="./images/blackmirror.png" alt="black mirror">
+            </li>
+          </ul>
+        </div>
+  
+        <div class="popular-movies">
+          <h1>Em alta</h1>
+          <ul>
+            <li>
+              <img src="./images/itacoisa.jpg" alt="it a coisa">
+            </li>
+            <li>
+              <img src="./images/coletivoterror.jpg" alt="Coletivo terror">
+            </li>
+            <li>
+              <img src="./images/halloween.jpg" alt="halloween">
+            </li>
+            <li>
+              <img src="./images/jumanji.jpg" alt="jumanji">
+            </li>
+            <li>
+              <img src="./images/gentegrande.jpg" alt="gente grande">
+            </li>
+          </ul>
+        </div>
+  
+        <div class="popular-movies">
+          <h1>Originais Netflix</h1>
+          <ul>
+            <li>
+              <img src="./images/tenkushinpan.jpg" alt="tenku shinpan">
+            </li>
+            <li>
+              <img src="./images/aliceinborderland.jpg" alt="alice in borderland">
+            </li>
+            <li>
+              <img src="./images/lupin.jpg" alt="lupin">
+            </li>
+            <li>
+              <img src="./images/strangerthings.jpg" alt="stranger things">
+            </li>
+            <li>
+              <img src="./images/bigmouth.jpg" alt="big mouth">
+            </li>
+          </ul>
+        </div>
+  
+        <div class="popular-movies">
+          <h1>Animação</h1>
+          <ul>
+            <li>
+              <img src="./images/kungfupanda.jpg" alt="kung fu panda">
+            </li>
+            <li>
+              <img src="./images/desencanto.jpg" alt="desencanto">
+            </li>
+            <li>
+              <img src="./images/avatar.jpg" alt="avatar">
+            </li>
+            <li>
+              <img src="./images/meumalvadofavorito.jpg" alt="meu malvado favorito">
+            </li>
+            <li>
+              <img src="./images/coraline.jpg" alt="coraline">
+            </li>
+          </ul>
+        </div>
+  
+        <div class="popular-movies">
+          <h1>Anime</h1>
+          <ul>
+            <li>
+              <img src="./images/yourname.jpg" alt="your name">
+            </li>
+            <li>
+              <img src="./images/casteloanimado.jpg" alt="o castelo animado">
+            </li>
+            <li>
+              <img src="./images/toradora.jpg" alt="toradora">
+            </li>
+            <li>
+              <img src="./images/pokemon.jpg" alt="pokemon">
+            </li>
+            <li>
+              <img src="./images/pecadoscapitais.jpg" alt="os sete pecados capitais">
+            </li>
+          </ul>
+        </div>
+  
+        <div class="popular-movies">
+          <h1>Comédia</h1>
+  
+          <ul>
+            <li>
+              <img src="./images/gentegrande2.jpg" alt=" gente grande">
+            </li>
+            <li>
+              <img src="./images/comosefosseaprimeiravez.jpg" alt="o castelo animado">
+            </li>
+            <li>
+              <img src="./images/segurancadeshopping.jpg" alt="toradora">
+            </li>
+            <li>
+              <img src="./images/asbranquelas.jpg" alt="pokemon">
+            </li>
+            <li>
+              <img src="./images/pixels.jpg" alt="os sete pecados capitais">
+            </li>
+          </ul>
+        </div>
+      </div>
+    </main>
 
-  <div class="popular-movies">
-    <h1>Em alta</h1>
-    <img class="it" src="./images/itacoisa.jpg" alt="it a coisa">
-    <img class="coletivo" src="./images/coletivoterror.jpg" alt="Coletivo terror">
-    <img class="halloween" src="./images/halloween.jpg" alt="halloween">
-    <img class="jumanji" src="./images/jumanji.jpg" alt="jumanji">
-    <img class="grownups" src="./images/gentegrande.jpg" alt="gente grande">
-  </div>
-
-  <div class="original">
-    <h1>Originais Netflix</h1>
-    <img class="tenkushinpan" src="./images/tenkushinpan.jpg" alt="tenku shinpan">
-    <img class="borderland" src="./images/aliceinborderland.jpg" alt="alice in borderland">
-    <img class="lupin" src="./images/lupin.jpg" alt="lupin">
-    <img class="strangerthings" src="./images/strangerthings.jpg" alt="stranger things">
-    <img class="bigmouth" src="./images/bigmouth.jpg" alt="big mouth">
-  </div>
-
-  <div class="popular-animation">
-    <h1>Animação</h1>
-    <img class="kungfupanda" src="./images/kungfupanda.jpg" alt="kung fu panda">
-    <img class="desencanto" src="./images/desencanto.jpg" alt="desencanto">
-    <img class="avatar" src="./images/avatar.jpg" alt="avatar">
-    <img class="favoriteevil" src="./images/meumalvadofavorito.jpg" alt="meu malvado favorito">
-    <img class="coraline" src="./images/coraline.jpg" alt="coraline">
-  </div>
-
-  <div class="popular-anime">
-    <h1>Anime</h1>
-    <img class="yourname" src="./images/yourname.jpg" alt="your name">
-    <img class="animationcastle" src="./images/casteloanimado.jpg" alt="o castelo animado">
-    <img class="toradora" src="./images/toradora.jpg" alt="toradora">
-    <img class="pokemon" src="./images/pokemon.jpg" alt="pokemon">
-    <img class="deadlysins" src="./images/pecadoscapitais.jpg" alt="os sete pecados capitais">
-  </div>
-
-  <div class="popular-comedia">
-    <h1>Comédia</h1>
-    <img class="grownups2" src="./images/gentegrande2.jpg" alt=" gente grande">
-    <img class="firsttime" src="./images/comosefosseaprimeiravez.jpg" alt="o castelo animado">
-    <img class="shoppingsecurity" src="./images/segurancadeshopping.jpg" alt="toradora">
-    <img class="whitegirls" src="./images/asbranquelas.jpg" alt="pokemon">
-    <img class="pixels" src="./images/pixels.jpg" alt="os sete pecados capitais">
-  </div>
-  </main>
-
-  <footer>
-    <div class="footer">
-      <p>© 2021 Giovanna Web Developer.</p>
-      <span>;D</span>
-    </div>
-  </footer>
-</body>
-
+    <footer>
+      <div class="footer">
+        <p>© 2021 Giovanna Web Developer.</p>
+        <span>;D</span>
+      </div>
+    </footer>
+  </body>
 </html>
